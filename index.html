@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Ranchers&display=swap" rel="stylesheet">
+
+<style>
+  .carousel-inner img {
+    width: 100%;
+    height: 100%;
+  }
+</style>
+
+<!-- css blog bắt đầu nhó -->
+<style>
+  
+  
+body {
+  font-family: Arial;
+  padding: 20px;
+  background: #f1f1f1;
+}
+
+.header {
+  padding: 30px;
+  font-size: 40px;
+  text-align: center;
+  background: white;
+}
+
+
+.leftcolumn {
+  float: left;
+  width: 75%;
+}
+
+.rightcolumn {
+  float: left;
+  width: 25%;
+  padding-left: 20px;
+}
+
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {
+    width: 100%;
+    padding: 0;
+  }
+}
+</style>
+<!-- css blog nghen -->
+
+<!--- css quotes nhó -->
+<style>
+  /* Slideshow container */
+.slideshow-container {
+  position: relative;
+  background: #f1f1f1f1;
+}
+
+/* Slides */
+.mySlides {
+  display: none;
+  padding: 80px;
+  text-align: center;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  color: #888;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  position: absolute;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+}
+
+/* The dot/bullet/indicator container */
+.dot-container {
+  text-align: center;
+  padding: 20px;
+  background: #ddd;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the active dot/circle */
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Add an italic font style to all quotes */
+q {font-style: italic;}
+
+/* Add a blue color to the author */
+.author {color: cornflowerblue;}
+</style>
+<!-- hết css quotes -->
+
+<!-- script quotes nghen -->
+
+ <script>
+   var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+ </script>
+<!-- end script quotes hen -->
+
+<!-- css gallery -->
+<style>
+  * {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f1f1f1;
+  padding: 20px;
+  font-family: Arial;
+}
+
+/* Center website */
+.main {
+  max-width: 1200px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 50px;
+  word-break: break-all;
+}
+
+.row {
+  margin: 8px -16px;
+}
+
+/* Add padding BETWEEN each column (if you want) */
+.row,
+.row > .column {
+  padding: 10px;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+}
+
+/* Clear floats after rows */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: white;
+  padding: 10px;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+  .column {
+    width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+</style>
+<!-- hết css gallery -->
+
+
+<!--- css contact nhó -->
+<style>/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Add a background color and some padding around the form */
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+</style>
+<!-- hết css contact -->
+
+<!-- css my team nhosoooo -->
+<style>
+  body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 15px;
+  padding: 20px;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #e65c00;
+  color: white;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+</style>
+<!-- hết css my team lun -->
+
+<!-- css video-->
+<style>
+  #myVideo {
+  position: sticky; 
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+.content {
+  position: sticky; 
+  bottom: 0;
+  background: rgba(255, 217, 179, 0.5); 
+  color:  #000000;  
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+}
+</style>
+
+<script>
+var video = document.getElementById("myVideo");
+</script>
+<!-- hết video nhó -->
+
+<!-- đây nà navbar nghen -->
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+
+  <a class="navbar-brand" style="font-family: Ranchers; color: #ff8000" href="index.html">BUMBLEBEE</a>
+
+  <ul class="navbar-nav ml-auto">  
+    <li class="nav-item pt-1">
+      <a class="nav-link" href="index.html">Home</a>
+    </li>
+    <li class="nav-item pt-1">
+      <a class="nav-link" href="about.html">About us</a>
+    </li>
+    <li class="nav-item pt-1">
+      <a class="nav-link" href="gallery.html">Gallery</a>
+    </li>
+    <li class="nav-item pt-1">
+      <a class="nav-link" href="blog.html">Blog</a>
+    </li>
+    <li class="nav-item pt-1">
+      <a class="nav-link" href="contact.html">Contact</a>
+    </li>
+  </ul>
+</nav>
+
+<!-- hết navbar và cái dưới là hết phần khai báo đầu tiên, zô body nhó -->
+  </head>
+
+
+  <body>
+<!-- mọi thứ của video nhé -->    
+    <section>
+<video autoplay muted loop id="myVideo">
+  <source src="./imgs/17.mp4" type="video/mp4">
+</video>
+
+<div class="content">
+  <h1 style="font-family: Ranchers">BUMBLEBEE's Atelier</h1>
+  <p>A bumblebee is a big bee flying with a loud buzzing with short, stubby wings. They love flowers, we all love flowers.</p>
+</div>  
+</section>
+<!-- hết video nha -->
+<br>
+<br>
+
+<!-- my team nhéeee -->
+
+<section>
+  <div class="about-section">
+  <h1>About Us</h1>
+  <p>We tell stories through photos, no words, just the photographs.</p>
+</div>
+<br>
+
+<h2 style="font-family: Ranchers; text-align: center;"> My Team</h2>
+<div class="row ml-5">
+
+
+  <div class="col-lg-4">
+    <div class="card" style="width: 400px">
+      <img src="./imgs/20.jpeg" class="img-fluid">
+      <div class="container-fluid">
+        <br>
+        <h2>Luke</h2>
+        <p class="title">Photographer</p>
+        <p class="text-justify">"Taking pictures is like tiptoeing into the kitchen late at night and stealing cookies."</p>
+        <p>luke@bumblebee.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-4">
+    <div class="card" style="width: 400px">
+      <img src="./imgs/26.jpeg" class="img-fluid">
+        <div class="container-fluid">
+          <br>
+        <h2>Liliah</h2>
+        <p class="title">Art Director</p>
+        <p class="text-justify">“The camera is an instrument that teaches people how to see without a camera.”</p>
+        <p>liliah@bumblebee.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-4">
+    <div class="card" style="width: 400px">
+      <img src="./imgs/22.jpeg" class="img-fluid">
+        <div class="container-fluid">
+          <br>
+        <h2>Luna</h2>
+        <p class="title">Designer</p>
+        <p class="text-justify">“The best thing about a picture is that it never changes, even when the people in it do.”</p>
+        <p>luna@bumblebee.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</section>
+<!-- hết my team nghennnn -->
+
+<br>
+<br>
+
+<!-- gallery chính đến đây -->
+<!-- MAIN (Center website) -->
+<section>
+  <div class="main">
+<h1 style="font-family: Ranchers; text-align: center;">OUR WORK</h1>
+<hr>
+
+<h2>Hello, BUMBLEBEE's gallery is here!</h2>
+<p>I, Luke, Liliah and Luna have met and worked together since 2017. We want to tell stories through photos, not only words, images also have tremendous power. “A picture is worth a thousand words.” That is the motto of my team. It is our objective to produce direct, truthful and bold images that tell the stories for those who have no voice.</p>
+
+<div class="row">
+  <div class="col-lg-6">
+    <div class="content">
+      <img src="./imgs/8.jpeg" style="width:100%">
+      <h3>Sunflower</h3>
+      <p class="text-justify">Long, hot summer days are better when drenched in a bright sunny glow. It is no surprise that the trademark images of summer are bound to be blooming with one cheery and warm flower across the Fraser Valley and beyond known as the Sunflower.</p>
+    </div>
+  </div>
+  <div class="col-lg-6">
+    <div class="content">
+    <img src="./imgs/12.jpeg" style="width:100%">
+      <h3>My Orange</h3>
+      <p class="text-justify">You are the love of my life. I don't know how you feel about me, but for me you are the air I breathe and the wind I feel every day. You are my orange, my morning, my dawn, anything, and everything between the sun and the moon dance around.</p>
+    </div>
+  </div>
+  <div class="col-lg-6">
+    <div class="content">
+    <img src="./imgs/10.jpeg" style="width:100%">
+      <h3>Some red</h3>
+      <p class="text-justify">My color is Red, and you? You know, we all have a color that best suits us. It's the one you look great in and really reflects your personality. What's your color? Mine is Red, a passionate love, seduction, violence, danger, anger, and adventure. </p>
+    </div>
+  </div>
+  <div class="col-lg-6">
+    <div class="content">
+    <img src="./imgs/9.jpeg" style="width:100%">
+      <h3>No Rain</h3>
+      <p class="text-justify">If it is a winter season, but you don’t have an umbrella to cover yourself, then even a smooth rain sounds very detesting and disturbing. When you were burning out of the blistering heat in the summer while praying tons of times to be rained, but it didn’t rain.</p>
+    </div>
+  </div>
+
+</div>
+
+<section>
+<div class="content">
+  <img src="./imgs/19.jpeg" style="width:100%">
+  <br>
+  <br>
+  <h3>Her name is Anna</h3>
+  <p class="text-justify">Anna was the name of my first camera, it was a gift that my parents gave me on my 15th birthday.</p>
+  <p class="text-justify">I currently no longer use Anna, exactly as I do not use Anna regularly for work. I think she's an old age, and I'm pretty clumsy, I'm afraid of dropping her, and I think she should get some rest. I remember the days of spring, summer, autumn and winter since I was 15, I have always worn Anna on my neck and the two of us went to many places together. My first partner on the path of photography, Anna, she's a special friend.</p>
+</div>
+</section>
+
+
+<!-- END MAIN -->
+</div>
+<!-- end gallery -->
+</section>
+
+
+<br>
+<br>
+<!-- yoho blog bắt đầu đâyyyy -->
+<section>
+
+<div class="header">
+  <h1 style="font-family: Ranchers; text-align: center">Blog</h1>
+</div>
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>A Petal</h2>
+      <h5>In Hanoi, Jul 15, 2020</h5>
+      <img src="./imgs/41.png" style="width:100%">
+      <br>
+      <p class="text-justify">Who says you can only enjoy pretty flowers during spring and summer? When the temperature starts to drop, your garden may end up suffering from neglect and overgrown plants. However, just because the end of summer is near, it doesn’t mean it’s the end of your garden. As the days get shorter, it’s time to brighten up your landscaping, flower beds, and . All it takes is planting a few perennials and annuals to keep your garden alive through cold-weather season.</p>
+    </div>
+    <div class="card">
+      <h2>Fear Of Sharp Things</h2>
+      <h5>In Viet Tri, Jul 13, 2020</h5>
+      <img src="./imgs/40.png" style="width:100%">
+      <br>
+      <p class="text-justify">Aichmophobia is a phobia of sharp, pointed objects. Those affected by aichmophobia will feel anxious, worried, and fearful around any object that is sharp and could cause harm. This could include pencils, pens, needles, pins, scissors, and other common household items. People with trypanophobia solely fear needles and medical procedures involving needles. People with belonephobia fear pins and needles specifically, while people with aichmophobia fear many types of sharp, pointed objects.</p>
+    </div>
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>About Me</h2>
+      <img src="./imgs/30" style="width:100%">
+      <br>
+      <p class="text-justify">"I pretty much never pick up my camera out of a sense of duty. I pick it up because I want to document something or capture something. I take pictures for the sheer joy of it. Even when I “need” to take a picture, for blog purposes, it still feels like fun work to me. Photography is a creative outlet for me. As always, lalala happy shooting!"</p>
+      <p>shmilyblossom@bumblebee.com</p>
+    </div>
+    <div class="card">
+      <h3>Popular Post</h3>
+      <br>
+      <img src="./imgs/32" style="width:100%"><br>
+      <img src="./imgs/34" style="width:100%"><br>
+      <img src="./imgs/35" style="width:100%"><br>
+      <img src="./imgs/46.jpg" style="width:100%">
+      
+      
+    </div>
+    <div class="card">
+      <h3>Follow Me On</h3>
+      <style>
+        .fa {
+  
+  font-size: 10px;
+  width: 40px;
+}
+
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+
+
+</style>
+</head>
+<body>
+ <div class="row">
+<a href="https://www.facebook.com/duong.buithithuy.73" class="fa fa-facebook"></a>
+<a href="http://www.youtube.com" class="fa fa-youtube"></a>
+<a href="http://www.instagram.com" class="fa fa-instagram"></a>
+</div>
+    </div>
+  </div>
+</div>
+</section>
+
+
+<!-- ố kè end blog -->
+
+<br>
+
+<!-- quotes slideshow bắt đầu è é -->
+
+<!-- Slideshow container -->
+<div class="slideshow-container">
+
+  <!-- Full-width slides/quotes -->
+  <div class="mySlides">
+    <q>When words become unclear, I shall focus with photographs. When images become inadequate, I shall be content with silence.</q>
+    <p style="color: #e65c00" class="author">— Ansel Adams</p>
+  </div>
+
+  <div class="mySlides">
+    <q>Beauty can be seen in all things, seeing and composing the beauty is what separates the snapshot from the photograph.</q>
+    <p style="color: #e65c00" class="author">— Matt Hardy</p>
+  </div>
+
+  <div class="mySlides">
+    <q>What I like about photographs is that they capture a moment that’s gone forever, impossible to reproduce.</q>
+    <p style="color: #e65c00" class="author">— Karl Lagerfeld</p>
+  </div>
+
+  <!-- Next/prev buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+
+<!-- Dots/bullets/indicators -->
+<div class="dot-container">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+<!-- end quotes -->
+
+
+
+<br>
+<br>
+
+<!-- contact nha -->
+<section>
+  <div class="header">
+  <h1  style="font-family: Ranchers; text-align: center">Contact</h1>
+</div>
+  <div class="container">
+  <form action="action_page.php">
+
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name...">
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name...">
+
+    <label for="country">Country</label>
+    <select id="country" name="country">
+      <option value="vietnam">Viet Nam</option>
+      <option value="india">India</option>
+      <option value="france">France</option>
+      <option value="usa">USA</option>
+      <option value="others">Others</option>
+    </select>
+
+    <label for="subject">Subject</label>
+    <textarea id="subject" name="subject" placeholder="Write something..." style="height:200px"></textarea>
+
+    <input type="submit" value="Submit">
+
+  </form>
+</div>
+</section>
+
+<br>
+<br>
+
+<!-- footer nhaaa -->
+<section>
+
+<style>
+.footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+}
+</style>
+
+<div class="footer">
+  <p style="font-family: Ranchers">BUMBLEBEE © 2020</p>
+
+<style>
+.footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+}
+</style>
+ 
+<style>
+.fa {
+  padding: 20px;
+  font-size: 20px;
+  width: 60px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 5px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+.fa-soundcloud {
+  background: #ff5500;
+  color: white;
+}
+
+.fa-reddit {
+  background: #ff5700;
+  color: white;
+}
+
+
+</style>
+</head>
+<body>
+<a href="https://www.facebook.com/duong.buithithuy.73" class="fa fa-facebook"></a>
+<a href="https://twitter.com" class="fa fa-twitter"></a>
+<a href="http://www.youtube.com" class="fa fa-youtube"></a>
+<a href="http://www.instagram.com" class="fa fa-instagram"></a>
+<a href="https://www.reddit.com" class="fa fa-reddit"></a>
+</div>
+
+</section>
+
+<!-- hết footer -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </body>
+
+
+
+    </head>
+</html>

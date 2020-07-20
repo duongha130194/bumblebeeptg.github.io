@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Ranchers&display=swap" rel="stylesheet">
+
+<style>
+  .carousel-inner img {
+    width: 100%;
+    height: 100%;
+  }
+</style>
+
+<!-- css my team nhosoooo -->
+<style>
+  body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 15px;
+  padding: 20px;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #e65c00;
+  color: white;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+</style>
+<!-- hết css my team lun -->
+
+
+
+<!-- css video-->
+<style>
+  #myVideo {
+  position: sticky; <!-- đổi thành sticky để nó k bị đè lên nhau -->
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+.content {
+  position: sticky; 
+  bottom: 0;
+  background: rgba(255, 217, 179, 0.5); <!-- pick màu cho cái nền ấy, cái a kia như kiểu thêm chút blur để mờ nên cứ để đó, thay thông số rgb thui -->
+  color:  #000000; <!-- màu chữ ở cái vide0 --> 
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+}
+</style>
+
+<script>
+var video = document.getElementById("myVideo");
+</script>
+<!-- hết video nhó -->
+
+<!-- đây nà navbar nghen -->
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+
+  <a class="navbar-brand" style="font-family: Ranchers; color: #ff8000" href="index.html">BUMBLEBEE</a>
+
+  <ul class="navbar-nav ml-auto">  
+    <li class="nav-item pt-1">
+      <a class="nav-link" href="index.html">Home</a>
+    </li>
+    <li class="nav-item pt-1">
+      <a class="nav-link" href="about.html">About us</a>
+    </li>
+    <li class="nav-item pt-1">
+      <a class="nav-link" href="gallery.html">Gallery</a>
+    </li>
+    <li class="nav-item pt-1">
+      <a class="nav-link" href="blog.html">Blog</a>
+    </li>
+    <li class="nav-item pt-1">
+      <a class="nav-link" href="contact.html">Contact</a>
+    </li>
+  </ul>
+</nav>
+
+<!-- hết navbar và cái dưới là hết phần khai báo đầu tiên, zô body nhó -->
+  </head>
+
+
+  <body>
+<!-- mọi thứ của video nhé -->    
+    <section>
+<video autoplay muted loop id="myVideo">
+  <source src="./imgs/17.mp4" type="video/mp4">
+</video>
+
+<div class="content">
+  <h1 style="font-family: Ranchers">BUMBLEBEE's Atelier</h1>
+  <p>A bumblebee is a big bee flying with a loud buzzing with short, stubby wings. They love flowers, we all love flowers.</p>
+</div>  
+</section>
+<!-- hết video nha -->
+
+
+
+
+
+<!-- my team nhéeee -->
+
+<section>
+  <div class="about-section">
+  <h1>About Us</h1>
+  <p>We tell stories through photos, no words, just the photographs.</p>
+</div>
+<br>
+
+<!--- về tôi -->
+<section>
+
+<div class="container">  
+<h1 style="font-family: Ranchers; text-align: center" class="text-center pt-5">Me</h1>  
+<hr class="w-50 mx-auto pt-5">
+
+<div class="row">
+  <div class="col">   
+    <img src="./imgs/51.jpg" class="img-fluid" width="258" height="145" align="right">
+  </div>     
+
+  <div class="col">  
+    <h1>Shmily Blossom</h1>
+<br>
+    <p class="text-justify">I pretty much never pick up my camera out of a sense of duty. I pick it up because I want to document something or capture something. I take pictures for<span id="dots">...</span><span id="more"> the sheer joy of it. Photography is a creative outlet for me. As always, lalala happy shooting! I take photos to freeze a beautiful moment and capture it forever. I see beauty in many people who don't see it in themselves and my goal as a photographer is to show them their own beauty. I also find photography to be an art form and think of it as just as relaxing as sitting down with my sketch pad. There are many terrible things in the world and I believe photography is an art that can help remind people of all the wonder in the world.</span></p>
+
+  <button type="button" class="btn btn-primary" onclick="myFunction()" id="myBtn">Read more</button>
+
+  <style>
+    #more {display: none;}
+  </style>
+
+  <script>
+    function myFunction() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("myBtn");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more";
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less";
+    moreText.style.display = "inline";
+  }
+}
+  </script>
+  </div>  
+</div>
+</div>  
+
+</section>
+
+<br>
+<br>
+
+<!-- hết về tôi -->
+<section>
+ <div class="container-fluid" ml-4 mr-4>
+ <br>  
+<h1 style="font-family: Ranchers; text-align: center" class="text-center pt-5">My team</h1> 
+<hr class="w-50 mx-auto pt-5">
+
+<div class="row mb-4 ml-4 mr-4">  
+
+<div class="col-lg-4">   
+   <div class="card" style="width: 400px">
+      <img src="./imgs/20.jpeg" class="img-fluid">
+      <div class="container-fluid">
+        <br>
+        <h2>Luke</h2>
+        <p class="title">Photographer</p>
+        <p class="text-justify">"Taking pictures is like tiptoeing into the kitchen late at night and stealing cookies."</p>
+        <p>luke@bumblebee.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+</div>
+
+
+<div class="col-lg-4">   
+   <div class="card" style="width: 400px">
+      <img src="./imgs/26.jpeg" class="img-fluid">
+      <div class="container-fluid">
+        <br>
+        <h2>Liliah</h2>
+        <p class="title">Art Director</p>
+        <p class="text-justify">“The camera is an instrument that teaches people how to see without a camera.”</p>
+        <p>liliah@bumblebee.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+ </div>
+
+
+<div class="col-lg-4">   
+   <div class="card" style="width: 400px">
+      <img src="./imgs/22.jpeg" class="img-fluid">
+        <div class="container-fluid">
+          <br>
+        <h2>Luna</h2>
+        <p class="title">Designer</p>
+        <p class="text-justify">“The best thing about a picture is that it never changes, even when the people in it do.”</p>
+        <p>luna@bumblebee.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+ </div>
+
+
+</div>
+
+</section>
+<!-- hết my team nghennnn -->
+
+
+<br>
+<br>
+<!-- footer nhaaa -->
+<section>
+
+<style>
+.footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+}
+</style>
+
+<div class="footer">
+  <p style="font-family: Ranchers">BUMBLEBEE © 2020</p>
+
+<style>
+.footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+}
+</style>
+ 
+<style>
+.fa {
+  padding: 20px;
+  font-size: 20px;
+  width: 60px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 5px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+.fa-soundcloud {
+  background: #ff5500;
+  color: white;
+}
+
+.fa-reddit {
+  background: #ff5700;
+  color: white;
+}
+
+
+</style>
+</head>
+<body>
+<a href="https://www.facebook.com/duong.buithithuy.73" class="fa fa-facebook"></a>
+<a href="https://twitter.com" class="fa fa-twitter"></a>
+<a href="http://www.youtube.com" class="fa fa-youtube"></a>
+<a href="http://www.instagram.com" class="fa fa-instagram"></a>
+<a href="https://www.reddit.com" class="fa fa-reddit"></a>
+</div>
+
+</section>
+
+<!-- hết footer -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </body>
+
+
+
+    </head>
+</html>

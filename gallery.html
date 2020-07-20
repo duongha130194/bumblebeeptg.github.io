@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Ranchers&display=swap" rel="stylesheet">
+
+<style>
+  .carousel-inner img {
+    width: 100%;
+    height: 100%;
+  }
+</style>
+
+
+<!-- css gallery -->
+<style>
+  * {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f1f1f1;
+  padding: 20px;
+  font-family: Arial;
+}
+
+/* Center website */
+.main {
+  max-width: 1100px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 50px;
+  word-break: break-all;
+}
+
+.row {
+  margin: 8px -16px;
+}
+
+/* Add padding BETWEEN each column (if you want) */
+.row,
+.row > .column {
+  padding: 10px;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+}
+
+/* Clear floats after rows */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: white;
+  padding: 10px;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+  .column {
+    width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+</style>
+<!-- hết css gallery -->
+
+<!--- css icon nhó -->
+<style>
+  .* {
+  box-sizing: border-box;
+}
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 5px;
+}
+
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 1000px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+  }
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: #ff6600;
+  color: white;
+}
+
+.fa {font-size:50px;}
+</style>
+<!-- hết css icon -->
+
+
+
+<!-- css video-->
+<style>
+  #myVideo {
+  position: sticky; <!-- đổi thành sticky để nó k bị đè lên nhau -->
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+.content {
+  position: sticky; 
+  bottom: 0;
+  background: rgba(255, 217, 179, 0.5); <!-- pick màu cho cái nền ấy, cái a kia như kiểu thêm chút blur để mờ nên cứ để đó, thay thông số rgb thui -->
+  color:  #000000; <!-- màu chữ ở cái vide0 --> 
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+}
+</style>
+
+<script>
+var video = document.getElementById("myVideo");
+</script>
+<!-- hết video nhó -->
+
+<!-- đây nà navbar nghen -->
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+
+  <a class="navbar-brand" style="font-family: Ranchers; color: #ff8000" href="index.html">BUMBLEBEE</a>
+
+  <ul class="navbar-nav ml-auto">  
+    <li class="nav-item pt-1">
+      <a class="nav-link" href="index.html">Home</a>
+    </li>
+    <li class="nav-item pt-1">
+      <a class="nav-link" href="about.html">About us</a>
+    </li>
+    <li class="nav-item pt-1">
+      <a class="nav-link" href="gallery.html">Gallery</a>
+    </li>
+    <li class="nav-item pt-1">
+      <a class="nav-link" href="blog.html">Blog</a>
+    </li>
+    <li class="nav-item pt-1">
+      <a class="nav-link" href="contact.html">Contact</a>
+    </li>
+  </ul>
+</nav>
+
+<!-- hết navbar và cái dưới là hết phần khai báo đầu tiên, zô body nhó -->
+  </head>
+
+
+  <body>
+<!-- mọi thứ của video nhé -->    
+    <section>
+<video autoplay muted loop id="myVideo">
+  <source src="./imgs/17.mp4" type="video/mp4">
+</video>
+
+<div class="content">
+  <h1 style="font-family: Ranchers">BUMBLEBEE's Atelier</h1>
+  <p>A bumblebee is a big bee flying with a loud buzzing with short, stubby wings. They love flowers, we all love flowers.</p>
+</div>  
+</section>
+<!-- hết video nha -->
+<br>
+<br>
+
+<!-- gallery chính đến đây -->
+<!-- MAIN (Center website) -->
+<section>
+  <div class="main">
+<h1 style="font-family: Ranchers; text-align: center;">OUR WORK</h1>
+<hr>
+
+<h2>Hello, BUMBLEBEE's gallery is here!</h2>
+<p>I, Luke, Liliah and Luna have met and worked together since 2017. We want to tell stories through photos, not only words, images also have tremendous power. “A picture is worth a thousand words.” That is the motto of my team. It is our objective to produce direct, truthful and bold images that tell the stories for those who have no voice.</p>
+
+<div class="row">
+  <div class="col-lg-6">
+    <div class="content">
+      <img src="./imgs/8.jpeg" style="width:100%">
+      <h3>Sunflower</h3>
+      <p class="text-justify">Long, hot summer days are better when drenched in a bright sunny glow. It is no surprise that the trademark images of summer are bound to be blooming with one cheery and warm flower across the Fraser Valley and beyond known as the Sunflower.</p>
+    </div>
+  </div>
+  <div class="col-lg-6">
+    <div class="content">
+    <img src="./imgs/12.jpeg" style="width:100%">
+      <h3>My Orange</h3>
+      <p class="text-justify">You are the love of my life. I don't know how you feel about me, but for me you are the air I breathe and the wind I feel every day. You are my orange, my morning, my dawn, anything, and everything between the sun and the moon dance around.</p>
+    </div>
+  </div>
+  <div class="col-lg-6">
+    <div class="content">
+    <img src="./imgs/10.jpeg" style="width:100%">
+      <h3>Some red</h3>
+      <p class="text-justify">My color is Red, and you? You know, we all have a color that best suits us. It's the one you look great in and really reflects your personality. What's your color? Mine is Red, a passionate love, seduction, violence, danger, anger, and adventure. </p>
+    </div>
+  </div>
+  <div class="col-lg-6">
+    <div class="content">
+    <img src="./imgs/9.jpeg" style="width:100%">
+      <h3>No Rain</h3>
+      <p class="text-justify">If it is a winter season, but you don’t have an umbrella to cover yourself, then even a smooth rain sounds very detesting and disturbing. When you were burning out of the blistering heat in the summer while praying tons of times to be rained, but it didn’t rain.</p>
+    </div>
+  </div>
+
+</div>
+
+<section>
+<div class="content">
+  <img src="./imgs/19.jpeg" style="width:100%">
+  <br>
+  <br>
+  <h3>Her name is Anna</h3>
+  <p class="text-justify">Anna was the name of my first camera, it was a gift that my parents gave me on my 15th birthday.</p>
+  <p class="text-justify">I currently no longer use Anna, exactly as I do not use Anna regularly for work. I think she's an old age, and I'm pretty clumsy, I'm afraid of dropping her, and I think she should get some rest. I remember the days of spring, summer, autumn and winter since I was 15, I have always worn Anna on my neck and the two of us went to many places together. My first partner on the path of photography, Anna, she's a special friend.</p>
+</div>
+</section>
+
+
+<!-- END MAIN -->
+</div>
+<!-- end gallery -->
+</section>
+
+
+
+
+
+<br>
+<br>
+
+<!-- icon nhaaa nha -->
+<section>
+  <div class="main">
+<h1 style="font-family: Ranchers; text-align: center;">EVERYDAY WITH US</h1>
+<hr>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <p><i class="fa fa-user"></i></p>
+      <h3>3+</h3>
+      <p>Partners</p>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <p><i class="fa fa-check"></i></p>
+      <h3>10+</h3>
+      <p>Projects</p>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <p><i class="fa fa-smile-o"></i></p>
+      <h3>20+</h3>
+      <p>Happy Clients</p>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <p><i class="fa fa-coffee"></i></p>
+      <h3>30+</h3>
+      <p>Meetings</p>
+    </div>
+  </div>
+</div>
+</section>
+<!-- mấy cái icon isiii -->
+
+<br>
+<br>
+<!-- footer nhaaa -->
+<section>
+
+<style>
+.footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+}
+</style>
+
+<div class="footer">
+  <p style="font-family: Ranchers">BUMBLEBEE © 2020</p>
+
+<style>
+.footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+}
+</style>
+ 
+<style>
+.fa {
+  padding: 20px;
+  font-size: 20px;
+  width: 60px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 5px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+.fa-soundcloud {
+  background: #ff5500;
+  color: white;
+}
+
+.fa-reddit {
+  background: #ff5700;
+  color: white;
+}
+
+
+</style>
+</head>
+<body>
+<a href="https://www.facebook.com/duong.buithithuy.73" class="fa fa-facebook"></a>
+<a href="https://twitter.com" class="fa fa-twitter"></a>
+<a href="http://www.youtube.com" class="fa fa-youtube"></a>
+<a href="http://www.instagram.com" class="fa fa-instagram"></a>
+<a href="https://www.reddit.com" class="fa fa-reddit"></a>
+</div>
+
+</section>
+
+<!-- hết footer -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </body>
+
+
+
+    </head>
+</html>
+
+
+
+
+
+
